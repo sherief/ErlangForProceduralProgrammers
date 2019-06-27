@@ -1,5 +1,7 @@
-%Comments come after a % sign
 -module(hello).
 -export([start/1]).
 
-start(X) -> io:format("X is ~w!~n", [X]).
+abs_value(X) when X < 0 -> -X;
+abs_value(X) when X > 0 -> X.
+
+start(X) -> io:format("abs(X) is ~w!~n", [abs_value(X)]).
