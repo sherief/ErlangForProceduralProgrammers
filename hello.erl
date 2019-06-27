@@ -1,7 +1,5 @@
 -module(hello).
--export([start/1, abs_value/1]).
+-export([abs_value/2]).
 
-abs_value(X) when X < 0 -> -X;
-abs_value(X) when X > 0 -> X.
-
-start(X) -> io:format("abs(X) is ~w!~n", [abs_value(X)]).
+abs_value(negative, X) -> -X;
+abs_value(positive, X) -> X.
