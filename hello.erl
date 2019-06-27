@@ -1,5 +1,5 @@
 %Comments come after a % sign
 -module(hello).
--export([start/0]).
+-export([start/1]).
 
-start() -> io:format("Hello world!~n").
+start(X) -> io:format("X is ~w!~n", [X]).
